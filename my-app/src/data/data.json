@@ -1,0 +1,23 @@
+[{
+    "id": 5456,
+    "title": "Stock Finder",
+    "description": "Stock Finder is a very simple application that allows a user to search companies based off of stock symbols. The user can then check out relevant financial data from each company. Financial data is acquired via the Yahoo Finance API. ",
+    "link": "https://github.com/mattbernhardt23/StockFinderApp",
+    "technologies": [
+        "NodeJs",
+        "React",
+        "Yahoo Finance API"
+    ]
+},
+{
+    "id": "3281",
+    "title": "House Marketplace App",
+    "description": "This application allows users to post and search real estate listings. This application uses a Google Firebase backend and Google Auth for authorization and authentication.",
+    "link": "https://github.com/mattbernhardt23/houseApp",
+    "technologies": [
+        "React",
+        "Firebase",
+        "Google Auth"
+    ]
+}
+]

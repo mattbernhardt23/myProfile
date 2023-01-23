@@ -1,4 +1,5 @@
 import { useState, useRef, forwardRef } from "react";
+import { toast } from "react-toastify";
 
 
 const Contact = forwardRef((props, ref) => {
@@ -40,9 +41,14 @@ const Contact = forwardRef((props, ref) => {
         message,
       }
     })
-    .then((message) => alert(message));
+    .then(() => {toast.success("Thank you! Message Sent")})
+    .then(setFormData({
+      name:"",
+      email: "",
+      message: ""
+    }))
   } catch (error) {
-    console.log(error)
+    toast.error("Unable to Send")
   }
 
   setFormData({
@@ -54,44 +60,50 @@ const Contact = forwardRef((props, ref) => {
   }
 
   return (
-    <div className="contactContainer" ref={ref}>
-      <h2>Contact</h2>
-      <div className="formControl">
+    <div 
+      className="bg-gradient-to-t to-neutral-900 from-neutral-700 pb-20 lg:p-20 lg:pt-20 flex flex-col items-center w-full"
+      ref={ref}
+    >
+      <h2 className="text-neutral-400 text-xl font-mono pb-8">Contact</h2>
+      <div className="w-full">
       <form onSubmit={onSubmit}>
-        <div className="inputContainer">
+        <div className="flex flex-col lg:flex-row md:content-between items-center m-4">
+        <div className="w-3/4 lg:w-1/2 m-4">
           <input 
             type="text" 
             placeholder="Name" 
             value={name}
-            className="inputItem"
+            className="w-full p-4 focus:ring-red-500 shadow-md focus:border-red-500 block sm:text-lg border-gray-700 rounded-md text-neutral-700"
             id="name"
             onChange={onChange}
             required
           />
         </div>  
-        <div className="inputContainer">
+        <div className="w-3/4 lg:w-1/2 m-4">
           <input 
             type="email" 
             placeholder="Email" 
             value={email}
             id="email"
-            className="inputItem"
+            className="w-full p-4 focus:ring-red-500 shadow-md focus:border-red-500 block sm:text-lg border-gray-700 rounded-md text-neutral-700"
             onChange={onChange}
           />
         </div>  
-        <div className="inputContainer">
+        </div>
+        <div className="flex flex-col items-center m-4 lg:m-8">
           <textarea 
-            className="messageInput" 
+            className="w-3/4 lg:w-full focus:ring-red-500 shadow-md focus:border-red-500 block p-4 sm:text-lg border-gray-700 rounded-md text-neutral-700"
+            placeholder="Hello Matthew, have some ideas we'd love to run by you..."
             value={message}
             id="message" 
-            rows="6"
+            rows="4"
             onChange={onChange}
           ></textarea>
         </div>  
       
       
-      <div className="contactButtonContainer">
-        <button type='submit' className="contactButton">Send</button>
+      <div className="flex flex-col items-center pt-8">
+        <button type='submit' className="border-2 border-black rounded-lg p-4 font-extrabold text-slate-200 bg-gradient-to-l to-neutral-500 from-neutral-900 tracking-widest hover:scale-110 ease-in-out duration-500">Send</button>
       </div>
       </form>
       </div>
