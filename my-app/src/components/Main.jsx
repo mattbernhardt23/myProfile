@@ -4,21 +4,17 @@ import { useEffect, useState } from "react";
 
 
 function Main({ refObj }) {
-  const [displayType, setDisplayType] = useState('hidden')
   const [elementDisplayType, setElementDisplayType] = useState('hidden')
 
   useEffect(() => {
     setTimeout(() => {
-      setDisplayType("flex")
-    }, 0)
-    setTimeout(() => {
       setElementDisplayType("absolute")
     }, 4000)
-  }, [displayType])
+  }, [elementDisplayType])
 
   return (
     <div className="h-[125vh] w-full bg-black p-8">
-    <div className={`${displayType} flex-row-reverse justify-between relative rounded-3xl bg-pattern bg-no-repeat bg-cover bg-center animate-fade-in`}
+    <div className={`flex flex-row-reverse justify-between relative rounded-3xl bg-pattern bg-no-repeat bg-cover bg-center animate-fade-in`}
     >
       
       <LinkButtons refObj={refObj}/>
