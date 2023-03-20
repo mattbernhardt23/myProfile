@@ -7,7 +7,7 @@ const ProjectVid2 = () => (
         // height="480"
         width="639"
         height="360"
-        src="https://www.youtube.com/embed/hWKYBfnt0_U"
+        src="https://www.youtube.com/embed/JYZeYXCYGrM"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

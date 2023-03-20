@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import Project1Vid from "./youtube/Project1Vid";
+import ProjectVid2 from "./youtube/ProjectVid2";
 import nodeIcon from "../assets/nodeIcon.png";
 import nextIcon from "../assets/next.png";
 import solidity from "../assets/solidity.png";
@@ -16,7 +16,7 @@ function Project2() {
             </h1>
             <div className="flex flex-col items-center font-mono text-lg lg:text-2xl py-4 tracking-widest animate-fade-in-down animation-delay-500">
             <h2 className="text-lg lg:text-2xl font-extrabold">
-              Product is Purpose
+              The Power Within
             </h2>
             <h3 className="text-md lg:text-lg">Ethereum Blockchain E-Commerce Site</h3>
             </div>
@@ -30,11 +30,11 @@ function Project2() {
             <div className="flex flex-row items-center w-11/12 lg:w-3/4">
               <div className="flex flex-col">
                 <p className="tracking-wider animate-fade-in-down animation-delay-700">
-                Product is Purpose is an Ethereum Blockchain site that allows users to purchase digital rights to videos that I’ve created. This project was an opportunity to familiarize myself with accessing the blockchain through a web application and creating a smart contracts, as well as an opportunity flesh out my ideas on a variety of subjects and further develop presentation and communication skills. 
+                The Power Within is an Ethereum Blockchain site that allows users to purchase digital rights to stream content that I have created. This project was an opportunity to build on the blockchain, write smart contracts, and envision what a world built on Web3 would look like.
                 </p>
                 <br></br>
                 <p className="tracking-wider animate-fade-in-down animation-delay-900">
-                This application was built following the Udemy course, Solidity & Ethereum in React(Next.js): The Complete Guide by Filip Jerga. This is a fantastic course that I highly recommend. The application is build using Next.js and accesses the blockchain by connecting the users Metamask wallet. The smart contracts controlling the access to digital content and payment transactions are written in Solidity. The site will go live upon the completion of digital content. Until then, feel free to explore the current code. 
+                This application was built following the Udemy course, Solidity & Ethereum in React(Next.js): The Complete Guide by Filip Jerga. This is a fantastic course that I highly recommend. The application is built using Next.js and accesses the Ethereum blockchain by connecting the users Metamask wallet. The smart contracts controlling the access to digital content and payment transactions are written in Solidity. The application has been deployed on Goerli Test Network and on Vercel. Click the link below to check it out!
                 </p>
               </div>
             </div>
@@ -97,17 +97,20 @@ function Project2() {
                 </a>
               </div>
               <div className="">
-                {/* <a 
-            href="https://github.com/mattbernhardt23/billionaireMap" target="_blank" rel="noreferrer"
-          > */}
+                <a 
+            href="https://eth-app-marketplace-6wjuowibd-mattbernhardt23.vercel.app/" target="_blank" rel="noreferrer"
+          >
                 <button className="border-2 border-black rounded-lg p-4 font-extrabold text-slate-200 bg-gradient-to-l to-neutral-500 from-neutral-900 tracking-widest hover:scale-110 ease-in-out duration-500">
-                  Coming Soon
+                  See It Live
                 </button>
-                {/* </a> */}
+                </a>
               </div>
             </div>
           </div>
         </div>
+        <div className="flex flex-col scale-50 md:scale-100 items-center py-2 lg:py-8 grayscale hover:grayscale-0 animate-fade-in-down animation-delay-2500">
+        <ProjectVid2 />
+      </div>
       </div>
     </div>
   );

@@ -47,7 +47,7 @@ const Project1 = forwardRef((props, ref) => {
             <p className="tracking-wider animate-fade-in-down animation-delay-1900">
             The application was built on the Node.js cross-platform runtime environment. The UX was built using Next.js in order to improve load times and improve overall user experience. The UI creation was enhanced by the Tailwind CSS framework. The backend, which handles user data, comments and content data is supported by Express.js and stored in a MongoDB database. State management is provided via Redux (in all honesty, Redux was far from essential, but I wanted to develop some familiarity with its usage). Finally, the map was provided by the NPM package React-Map-GL, which comes via Mapbox GL JS. The data for all billionaires is made possible by Forbes and acquired from Rapid API, then given a geolocation attribute thanks to Google Location API. 
             </p>
-            </div>
+            </div> 
           </div>
         </div>
         <div className="flex flex-col items-center p-4 py-8">
